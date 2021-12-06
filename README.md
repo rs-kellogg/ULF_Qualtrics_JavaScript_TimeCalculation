@@ -92,6 +92,7 @@ The **alignment of the radio button options should be horizontal** for this to w
 
                    .Skin .MC .MAHR li, .Skin .MC .MAHR td, .Skin .MC .SAHR li, .Skin .MC .SAHR td{
                         font-size:1.5em;
+                        /*To increase the space between each option */
                         margin-bottom:50px;
                         margin-top:50px;
                    }
