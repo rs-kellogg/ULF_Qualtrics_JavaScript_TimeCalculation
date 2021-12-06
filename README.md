@@ -85,6 +85,8 @@ To make sure the time to click the last choice is captured and time to click the
 
 This is the code to be put in Look and Feel Header section at the bottom to increase size of radio buttons on mobile phones and tablets.
 
+The **alignment of the radio button options should be horizontal** for this to work and not vertical.
+
         <style type="text/css">@media screen and (max-width: 780px) {
     
 
