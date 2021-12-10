@@ -1,6 +1,6 @@
 Javascript to calculate time to submit on each page after click & the difference in time between pageLoad & last Click of radio option
 
-There is also some code at the bottom to resize each radio button size to make it larger and increase the spacing on mobile phones to make it easier to click.
+There is also some code at the bottom to resize each radio button size to make it larger and increase the spacing on mobile phones to make it easier to click and to ensure the options appear at the same location independent of question size.
 
 To make sure the time to click the last choice is captured and time to click the next button is captured for a question these 3 steps for code should be in the survey.
 
@@ -83,19 +83,34 @@ To make sure the time to click the last choice is captured and time to click the
 
 3. **Add the new embedded data variables in the flow section.**
 
-This is the code to be put in Look and Feel Header section at the bottom to increase size of radio buttons on mobile phones and tablets.
+This is the code to be put in Look and Feel Header section at the bottom to increase size of radio buttons on mobile phones and tablets and to ensure the options appear at the same location independent of question size.
 
 The **alignment of the radio button options should be horizontal** for this to work and not vertical.
 
-        <style type="text/css">@media screen and (max-width: 780px) {
-    
+       <style type="text/css">@media screen and (max-width: 780px) {
+  
 
-                   .Skin .MC .MAHR li, .Skin .MC .MAHR td, .Skin .MC .SAHR li, .Skin .MC .SAHR td{
-                        font-size:1.2em!important;
-                        /*To increase the space between each option */
-                        margin-bottom:10px!important;
-                        margin-top:10px!important;
-                   }
+                           .Skin .MC .MAHR li, .Skin .MC .MAHR td, .Skin .MC .SAHR li, .Skin .MC .SAHR td{
+                                font-size:1.5em!important;
+                                /*To increase the space between each option*/
+                                margin-bottom:10px!important;
+                                margin-top:10px!important;
+                           }
+
+                           .Skin .MC .MAHR li, .Skin .MC .MAHR td, .Skin .MC .SAHR li, .Skin .MC .SAHR td{
+                                display:table-cell;
+                           }
+
+                           .Skin .MC .MAHR table td, .Skin .MC .SAHR table td, .Skin .NPS table td{
+                                text-align: left;
+                           }
+                           /*To ensure the options appear at the same location independent of question size*/
+                          .Skin .QuestionText{
+                                height: 30vh;
+                           }
+                        .Skin #Buttons {text-align:center;}
+
+                
                 }
-
         </style>
+
